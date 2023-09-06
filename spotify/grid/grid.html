@@ -1,0 +1,175 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid</title>
+    <style>
+      .nested {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 0.5em;
+        grid-auto-rows: 100px;
+      }
+      .nested > div {
+        border: 1px dashed black;
+        padding: 10px;
+      }
+      .wrapper {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 1em;
+        grid-auto-rows: minmax(30px, auto);
+      }
+      .wrapper > div {
+        background-color: #eee;
+        padding: 1em;
+      }
+      .wrapper > div:nth-child(even) {
+        background-color: #ddd;
+        padding: 1em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div>
+        Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in
+        laying out print, graphic or web designs. The passage is attributed to
+        an unknown typesetter in the 15th century who is thought to have
+        scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a
+        type specimen book. It usually begins with:
+      </div>
+      <div>
+        Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in
+        laying out print, graphic or web designs. The passage is attributed to
+        an unknown typesetter in the 15th century who is thought to have
+        scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a
+        type specimen book. It usually begins with: The passage experienced a
+        surge in popularity during the 1960s when Letraset used it on their
+        dry-transfer sheets, and again during the 90s as desktop publishers
+        bundled the text with their software. Today it's seen all around the
+        web; on templates, websites, and stock designs. Use our generator to get
+        your own, or read on for the authoritative history of lorem ipsum.
+      </div>
+      <div class="nested">
+        <div>lorem</div>
+        <div>lorem</div>
+        <div>lorem</div>
+        <div>lorem</div>
+        <div>lorem</div>
+        <div>lorem</div>
+        <div>lorem</div>
+        <div>lorem</div>
+        <div>lorem</div>
+      </div>
+      <div>
+        Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in
+        laying out print, graphic or web designs. The passage is attributed to
+        an unknown typesetter in the 15th century who is thought to have
+        scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a
+        type specimen book. It usually begins with:
+      </div>
+      <div>
+        Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in
+        laying out print, graphic or web designs. The passage is attributed to
+        an unknown typesetter in the 15th century who is thought to have
+        scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a
+        type specimen book. It usually begins with: The passage experienced a
+        surge in popularity during the 1960s when Letraset used it on their
+        dry-transfer sheets, and again during the 90s as desktop publishers
+        bundled the text with their software. Today it's seen all around the
+        web; on templates, websites, and stock designs. Use our generator to get
+        your own, or read on for the authoritative history of lorem ipsum.
+      </div>
+    </div>
+  </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .dropdown-menu li {
+        position: relative;
+      }
+      .dropdown-menu .dropdown-submenu {
+        display: none;
+        position: absolute;
+        left: 100%;
+        top: -7px;
+      }
+      .dropdown-menu .dropdown-submenu-left {
+        right: 100%;
+        left: auto;
+      }
+      .dropdown-menu > li:hover > .dropdown-submenu {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <ul class="navbar-nav">
+          <!-- Dropdown -->
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdownMenuLink"
+              role="button"
+              data-mdb-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Dropdown link
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li>
+                <a class="dropdown-item" href="#">Action</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Another action</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#"> Submenu &raquo; </a>
+                <ul class="dropdown-menu dropdown-submenu">
+                  <li>
+                    <a class="dropdown-item" href="#">Submenu item 1</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Submenu item 2</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#"
+                      >Submenu item 3 &raquo;
+                    </a>
+                    <ul class="dropdown-menu dropdown-submenu">
+                      <li>
+                        <a class="dropdown-item" href="#">Multi level 1</a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">Multi level 2</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Submenu item 4</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Submenu item 5</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </body>
+</html>

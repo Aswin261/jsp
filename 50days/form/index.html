@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Animation</title>
+    <link rel="stylesheet" href="./index.css"/>
+    <meta name="Progress" content="steps"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <h1>Please Login</h1>
+        <form>
+            <div class="form-control">
+                <input type="text" required/>
+                <label>Name</label>
+            </div>
+            <div class="form-control">
+                <input type="password" required/>
+                <label>Password</label>
+            </div>
+            <button class="btn">Login</button>
+            <p class="text">Dont have an accoung?<a href="#">Register</a></p>
+                </form>
+    </div>
+    <div class="soundboard">
+        <audio src="./sounds/applause.mp3" id="applause"></audio>
+        <audio src="./sounds/boo.mp3" id="boo"></audio>
+        <audio src="./sounds/gasp.mp3" id="gasp"></audio>
+        <audio src="./sounds/tada.mp3" id="tada"></audio>
+        <audio src="./sounds/victory.mp3" id="victory"></audio>
+        <audio src="./sounds/wrong.mp3" id="wrong"></audio>
+        <div id="buttons">
+        </div>
+        <div class="joke-container">
+            <h3>Don't Laugh Challenge </h3>
+                <div class="joke" id="joke">joke message</div>
+                <button id="next" class="button">Next</button>
+                </div>
+    </div>
+    <div id="insert">
+        <!-- <div class="key">
+            a 
+            <small>event.key</small>
+        </div>
+        <div class="key">
+            65
+            <small>event.which</small>
+        </div>
+        <div class="key">
+            keyA
+            <small>event.code</small>
+        </div> -->
+        <div class="key">Press any key to get the keycode and code.</div>
+    </div>
+    
+    <!-- <span class="ripple" style="top:25px;left:80px"></span> -->
+    <script src="./index.js"></script>
+</body>
+</html>

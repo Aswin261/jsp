@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Condensed:ital,wght@0,300;1,300&display=swap');
+*{
+    box-sizing:border-box;
+}
+:root{
+    --hover-width:75%;
+    --other-width:25%;
+    --speed:1000ms;
+}
+body{
+    background-color:#fff;
+    font-family:Roboto;
+    margin:0;
+    overflow:hidden;
+    height:100vh;
+}
+.container{
+    position:relative;
+    width:100%;
+    height:100%;
+    background-color: #333;
+}
+.split{
+    position:absolute;
+    width: 50%;
+    height:100%;
+    overflow: hidden;
+}
+.split.left{
+    left:0;
+    background:url('https://images.unsplash.com/photo-1614882105050-b81b3298ec47?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=388&q=80') no-repeat center center/cover;
+}
+.split.right{
+    right:0;
+    background:url('https://images.unsplash.com/photo-1604586398467-32924c78b879?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHhib3h8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=600&q=60') no-repeat center center/cover;
+}
+h1{
+    font-size:3.5rem;
+    color:#fff;
+    position:absolute;
+    top:20%;
+    left:50%;
+    transform:translate(-50%);
+    white-space: nowrap;
+    letter-spacing:1px;
+}
+.btn{
+    position:absolute;
+    left:50%;
+    top:40%;
+    text-decoration:none;
+    color:#fff;
+    border:#fff solid 0.25rem;
+    padding:1rem;
+    width:15rem;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    transform:translate(-50%);
+    font-weight:bold;
+    margin-top:2rem;
+    text-transform:uppercase;
+    cursor:pointer;
+}
+.split.left .btn:hover{
+    background-color:rgb(17, 67, 231);
+    border-color:rgb(17, 67, 231); ;
+
+}
+.split.right .btn:hover{
+    background-color:rgb(224, 17, 231);
+    border-color:rgb(224, 17, 231);
+
+}
+.hover-left .left{
+    width:var(--hover-width);
+}
+.hover-left .right{
+    width:var(--other-width);
+}
+.hover-right .left{
+    width:var(--other-width);
+}
+.hover-right .right{
+    width:var(--hover-width);
+}
+.split.left,.split.right,.split.right::before,.split.left::before{
+    transition:all var(--speed) ease-in-out;
+}
+@media (max-width:725px){
+    h1{
+        font-size:3rem;
+        top:25%;
+    }
+    .btn{
+        width:10rem;
+        padding:0.5rem;
+    }
+}

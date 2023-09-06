@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Condensed:ital,wght@0,300;1,300&display=swap');
+*{
+    box-sizing:border-box;
+}
+body{
+    background-color:#fff;
+    font-family:Roboto;
+}
+h1{
+    margin:30px 0 40px;
+    text-align:center;
+}
+.faq-container{
+    margin:0 auto;
+    width:600px;
+}
+.faq{
+    background-color:transparent;
+    border:1px solid #000;
+    border-radius:5px;
+    margin:10px auto;
+    padding:10px;
+    position:relative;
+    overflow:hidden;
+    transition:0.3s ease;
+}
+.faq.active{
+    background-color:rgb(239, 239, 239);
+    box-shadow: 0 3px 6px rgb(0,0,0,0.1),0 3px 6px rgb(0,0,0,0.1);
+}
+.faq.active::before, .faq.active::after{
+    content:'\f075';
+    font-family:'Font Awesome 5 Free';
+    font-size:7rem;
+    color:#2ecc71;
+    position:absolute;
+    opacity:0.2;
+    top:20px;
+    left:20px;
+    z-index:0;
+}
+.faq.active::before{
+    color:deepskyblue;
+    top:-10px;
+    left:-30px;
+    transform:rotateY(180deg);
+}
+.faq-title{
+    margin:0 30px 0 0;
+}
+.faq-text{
+    display:none;
+    margin:30px 0 0;
+}
+.faq.active .faq-text{
+    display:block;
+}
+.faq-toggle{
+    background-color:transparent;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border:0;
+    position:absolute;
+    top:10px;
+    right:30px;
+    height:30px;
+    width:30px;
+    padding:0;
+    font-size:16px;
+    border-radius:50%;
+    cursor:pointer;
+}
+.faq-toggle .fa-times{
+    display:none;
+}
+.faq.active .faq-toggle .fa-times{
+    display:block;
+    color:#000;
+    /* background-color:#fff; */
+}
+.faq.active .faq-toggle .fa-chevron-down{
+    display:none;
+}
+.faq.active .faq-toggle{
+    background-color:#fff;
+}
+.random-picker{
+   margin:20px auto;
+   width:700px;
+   border:1px solid rgb(0,0,0,0.1);
+   border-radius:20px;
+   padding:20px;
+   overflow:auto;
+   background-color:rgb(122, 168, 252);
+}
+#textarea{
+    border:0;
+    height:100px;
+    width:100%;
+    padding:16px;
+    margin:0 0 20px;
+    font-size:16px;
+    display:block;
+}
+#textarea:focus{
+    outline:none;
+}
+.tag{
+    background-color:#ff7b00;
+    padding:10px 20px;
+    border-radius:50px;
+    color:#fff;
+    displaY:inline-block;
+    font-size:16px;
+    margin:3px;
+}
+.tag.highlight{
+    background-color:#273c75;
+}
